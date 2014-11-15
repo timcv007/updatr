@@ -1,14 +1,16 @@
 {
-  "manifest_version": 1,
+  "manifest_version": 2,
 
   "name": "Updatr",
   "description": "This extension links notifications from several social media outlets in one place.",
   "version": "1.0",
+  "icons": {"128": "icon.png"},
 
   "permissions": [
     "tab" //maybe needed for future "go to notification" feature
   ],
   "browser_action": {
+    "default_title": "Updatr",
     "default_icon": "icon.png",
     "default_popup": "popup.html"
   }
