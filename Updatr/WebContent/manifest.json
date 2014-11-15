@@ -1,5 +1,5 @@
 {
-  "manifest_version": 1,
+  "manifest_version": 2,
 
   "name": "Updatr",
   "description": "This extension links notifications from several social media outlets in one place.",
