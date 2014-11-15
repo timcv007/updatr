@@ -7,7 +7,7 @@
   "icons": {"128": "icon.png"},
 
   "permissions": [
-    "tab" //maybe needed for future "go to notification" feature
+    //"tab" maybe needed for future "go to notification" feature
   ],
   "browser_action": {
     "default_title": "Updatr",
