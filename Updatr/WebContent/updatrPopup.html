@@ -1,12 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<link type="text/css" href="updatrStyle.css"></link>
+<script type="text/javascript" src="updatrScript.js"></script>
+<meta charset="UTF-8">
+<title>Updatr Social Media Aggregator Tool</title>
 </head>
 <body>
-	<p>adding paragraph</p>
 
-<h1>This will be the chrome extension soon!</h1>
+<!-- temp include of facebook sdk call in script -->
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<!-- secon SDK call... -->
+
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : 'updatrUnofficialid',
+          xfbml      : true,
+          version    : 'v2.1'
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+<div>
+	<table>
+		<tr>
+			<td id="fb">
+				<h2 id="fb-label">Login to Facebook</h2>
+				<!-- testing first suggested login button option -->
+				<div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="false"></div>
+				<!-- testing 2nd button option -->	
+				<fb:login-button length="long" background="light" perms="email" size="medium" onlogin="loginWithFacebookConnect()"></fb:login-button>
+				<!-- neither work for now, using temp button to link to facebook -->
+				<a target="_blank" href="http://www.facebook.com"><img src="fbLogin.png" id="tempFbLogin"></a>
+			</td>
+		</tr>
+		<tr>
+			<td id="twitter">
+				<p>twitter coming soon</p>
+			</td>
+		</tr>
+	</table>
+
+</div><!-- main wrapper -->
+
+
 </body>
 </html>
