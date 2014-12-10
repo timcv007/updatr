@@ -7,18 +7,20 @@
   "icons": {"128": "icon.png"},
 
   "permissions": [
-    "http://www.facebook.com/*",
-    "tabs"
+    "alarms",
+    "tabs",
+    "webNavigation",
+    "*://*.google.com/"
   ],
   
   "browser_action": {
     "default_title": "Updatr",
-    "default_icon": "icon.png",
-    "default_popup": "updatrPopup.html"
+    "default_icon": "icon.png"
   },
-  
+    
   "background":{
-    "scripts": ["updatrScript.js"]
+    "persistent": true,
+    "page": "background.html"
     }
 
 }
